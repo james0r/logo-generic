@@ -1,0 +1,128 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the homepage hero section
+// -----------------------------------------------------------------------------
+
+.home-hero {
+  &-inner {
+
+    .mobile-slider,
+    .desktop-slider {
+      .slide-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        .content {
+          margin-left: 20px;
+
+          @include md {
+            margin-left: 78px;
+          }
+          
+          h2 {
+            font-size: calc(100vw * (.0026 * 20));
+            margin-bottom: 8px;
+            font-family: Pacifico;
+
+            @include md {
+              font-size: 50px;
+            }
+          }
+  
+          h4 {
+            font-weight: 300;
+            margin-bottom: 20px;
+            font-size: calc(100vw * (.0026 * 16));
+
+            @include md {
+              font-size: 40px;
+            }
+          }
+
+          a {
+            background-color: #000;
+            font-weight: bold;
+            font-size: calc(100vw * (.0026 * 8));
+            color: white;
+            text-transform: uppercase;
+            display: inline-block;
+            padding: calc(100vw * (.0026 * 6)) calc(100vw * (.0026 * 10));
+            text-decoration: none;
+
+            @include md {
+              padding: 12px 20px;
+              font-size: 20px;
+            }
+          }
+        }
+
+      }
+
+      .slick-dots {
+
+        bottom: 20px !important;
+
+        button {
+          background-color: rgba(216,216,216, .7);
+        }
+
+        li.slick-active button {
+          background-color: white;
+        }
+
+        button, li {
+          height: 12px;
+          width: 12px;
+          border-radius: 0px !important;
+
+          @include md {
+            height: 26px;
+            width: 26px;
+          }
+
+          &::before {
+            display: none;
+          }
+        }
+
+        li {
+          @include md {
+            margin: 0px 10px;
+          }
+        }
+      }
+    }
+
+    .mobile-slider {
+      display: block;
+
+      @include md {
+        display: none;
+      }
+
+      .slide-inner {
+        width: 100%;
+        height: calc(100vw * 0.6);
+        background-size: cover;
+        background-position: center;
+        min-height: 227px;
+      }
+    }
+
+    .desktop-slider {
+      display: none;
+
+      @include md {
+        display: block;
+      }
+      .slide-inner {
+        width: 100%;
+        height: calc(100vw * 0.6);
+        background-size: cover;
+        background-position: center;
+        max-height: 638px;
+      }
+    }
+  }
+}

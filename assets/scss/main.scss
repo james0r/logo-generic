@@ -12,6 +12,7 @@
 
 // 3. Base stuff
 @import
+  'base/reset',
   'base/base',
   'base/fonts',
   'base/typography',
@@ -25,7 +26,8 @@
 // 5. Components
 @import
   'components/button',
-  'components/promo-bar';
+  'components/promo-bar',
+  'components/hero';
 
 // 6. Page-specific styles
 @import
