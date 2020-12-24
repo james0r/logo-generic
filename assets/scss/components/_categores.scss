@@ -1,3 +1,76 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the categories section
 // -----------------------------------------------------------------------------
+
+.categories {
+  padding: 18px 15px;
+
+  &-inner {
+
+    .category-list {
+      display: flex;
+      column-gap: 15px;
+      row-gap: 15px;
+      flex-wrap: wrap;
+
+      @include md {
+        column-gap: 40px;
+        row-gap: 40px;
+      }
+
+      .category-item {
+        height: 215px;
+        position: relative;
+        flex-basis: 164px;
+        flex-grow: 9999;
+
+        @include md {
+          height: 400px;
+          flex: 1 1 300px;
+        }
+        
+        @include lg {
+          height: 569px;
+          flex: 1 1 435px;
+        }
+        
+
+        img {
+          object-fit: cover;
+          object-position: center;
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        .cat-item-label {
+          position: absolute;
+          height: 42px;
+          background-color: #{$brand-color};
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          font-weight: 300;
+          font-weight: 18px;
+          font-family: Pacifico, sans-serif;
+
+          @include md {
+            height: 110px;
+            font-size: 50px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -21,6 +21,7 @@
 
 <script>
 export default {
+  name: 'MobileSlide',
   props: ["title", "tagline", "btnText", "btnLink", "bgImage"],
 };
 </script>

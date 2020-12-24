@@ -2,8 +2,9 @@
 <div>
     <PromoBar message="FREE SHIPPING ON ALL ORDERS OVER $75"></PromoBar>
     <Header compName="header"></Header>
-    <Hero />
+    <!-- <Hero /> -->
     <Categories />
+    <Arrivals />
 </div>
 </template>
 
@@ -14,11 +15,12 @@ import Footer from './components/Footer.vue'
 import PromoBar from './components/PromoBar.vue'
 import Hero from './components/Hero.vue'
 import Categories from './components/Categories.vue'
+import Arrivals from './components/Arrivals.vue'
 
 export default Vue.extend({
+  name: 'App',
   data() {
     return {
-      bundler: "Parcel"
     };
   },
   components: {
@@ -26,7 +28,8 @@ export default Vue.extend({
     Footer,
     PromoBar,
     Hero,
-    Categories
+    Categories,
+    Arrivals
   }
 });
 </script>

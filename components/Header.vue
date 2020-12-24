@@ -18,6 +18,7 @@
 
 <script>
 export default {
+  name: 'Header',
   props: ['compName']
 }
 </script>

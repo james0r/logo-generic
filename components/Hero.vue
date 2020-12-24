@@ -2,7 +2,7 @@
   <section id="home-hero" class="home-hero">
     <div class="home-hero-inner">
       <VueSlickCarousel :arrows="true" :dots="true" class="mobile-slider">
-        <li v-for="item in 4" :key="item">
+        <li v-for="(item, index) in 4" :key="index">
           <MobileSlide
             :bgImage="mobileBgImage"
             btnText="SHOP NOW"
@@ -13,7 +13,7 @@
         </li>
       </VueSlickCarousel>
       <VueSlickCarousel :arrows="true" :dots="true" class="desktop-slider">
-        <li v-for="item in 4" :key="item">
+        <li v-for="(item, index) in 4" :key="index">
           <DesktopSlide
             :bgImage="desktopBgImage"
             btnText="SHOP NOW"
@@ -36,9 +36,13 @@ import MobileSlide from "./MobileSlide";
 import DesktopSlide from "./DesktopSlide";
 
 export default {
-  mounted: function () {},
-  components: { VueSlickCarousel, MobileSlide, DesktopSlide },
-  data: () => {
+  name: "Hero",
+  components: { 
+    VueSlickCarousel, 
+    MobileSlide, 
+    DesktopSlide 
+  },
+  data: function() {
     return {
       mobileBgImage: require("../assets/images/slide-bg-mobile.jpg"),
       desktopBgImage: require("../assets/images/slide-bg-desktop.jpg"),
@@ -46,6 +50,3 @@ export default {
   },
 };
 </script>
-
-<style>
-</style>

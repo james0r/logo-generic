@@ -21,6 +21,7 @@
 
 <script>
 export default {
+  name: 'DesktopSlide',
   props: ["title", "tagline", "btnText", "btnLink", "bgImage"],
 };
 </script>
