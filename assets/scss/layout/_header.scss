@@ -1,3 +1,71 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+.header {
+  background-color: #{$brand-color};
+  height: 53px;
+
+  @include md {
+    height: 94px;
+  }
+
+  &-inner {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @include md {
+      justify-content: center;
+    }
+
+    .mobile-menu-icon {
+      width: 31px;
+      height: auto;
+      margin-left: 20px;
+
+      @include md {
+        display: none;
+      }
+    }
+
+    a {
+      display: block;
+    }
+
+    .header-logo-mobile {
+      width: 54px;
+      height: 45px;
+      display: block;
+    }
+
+    ul.primary-menu {
+      font-size: 28px;
+      font-weight: 300;
+      list-style: none;
+      padding-left: 0px;
+      display: none;
+
+      @include md {
+        display: block;
+      }
+
+      li {
+        display: inline-block;
+        margin-left: 36px;
+      }
+    }
+
+    .cart-icon {
+      width: 22px;
+      height: auto;
+      margin-right: 20px;
+
+      @include md {
+        display: none;
+      }
+    }
+  }
+}

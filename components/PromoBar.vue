@@ -1,7 +1,7 @@
 <template>
   <section id="promo-bar" class="promo-bar">
     <div class="promo-bar-inner">
-      {{ message }}
+      <span class="promo-bar-message">{{ message }}</span>
     </div>
   </section>
 </template>

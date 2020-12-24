@@ -34,32 +34,26 @@
 
 /// Easy Breakpoints
 
-@mixin xs {
-    @media (max-width: #{$screen-xs-max}) {
-        @content;
-    }
- }
-
 @mixin sm {
-    @media (max-width: #{$screen-sm-max}) {
+    @media (min-width: #{$screen-sm-max}) {
         @content; 
     }
  }
  
  @mixin md {
-    @media (max-width: #{$screen-md-max}) {
+    @media (min-width: #{$screen-md-max}) {
         @content;
     }
  }
  
  @mixin lg {
-    @media (max-width: #{$screen-lg-max}) {
+    @media (min-width: #{$screen-lg-max}) {
         @content;
     }
  }
  
  @mixin xl {
-    @media (max-width: #{$screen-xl-max}) {
+    @media (min-width: #{$screen-xl-max}) {
         @content;
     }
  }

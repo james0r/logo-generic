@@ -1,0 +1,20 @@
+.promo-bar {
+  background-color: #000;
+  font-family: Lato;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+  padding: 3px 5vw;
+
+  @include md {
+    font-size: 26px;
+  }
+
+  &-inner {
+    text-align: center;
+
+    .promo-bar-message {
+      
+    }
+  }
+}
