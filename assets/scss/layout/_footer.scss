@@ -1,3 +1,96 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+.footer {
+  background-color: black;
+
+  &-inner {
+    padding: 20px 50px 40px;
+
+    @include md {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    .label {
+      font-family: Pacifico, sans-serif;
+      display: inline-block;
+
+      font-weight: 400;
+      font-family: Pacifico, sans-serif;
+      font-size: 20px;
+      color: white;
+      text-align: left;
+      margin-bottom: 10px;
+      position: relative;
+      width: 100%;
+      margin-right: auto;
+
+      .toggler {
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+
+        @include md {
+          display: none !important;
+        }
+      }
+
+      @include md {
+        font-size: 35px;
+        margin-bottom: 24px;
+        display: inline-block;
+      }
+    }
+
+    .menu-2 ul {
+      display: none;
+
+      @include md {
+        display: block !important;
+      }
+    }
+
+    .menu-1,
+    .menu-2 {
+      margin-bottom: 10px;
+      
+      li {
+        font-weight: 300;
+        font-size: 16px;
+      }
+      
+      @include md {
+        margin-left: 60px;
+        display: black !important;
+      }
+    }
+
+    .menu-3 {
+      li {
+        display: inline-block;
+        margin-left: 16px;
+
+        &:first-child {
+          margin-left: 0px;
+        }
+      }
+
+      li img {
+        height: 32px;
+      }
+
+      .label {
+        &::after {
+          display: none;
+        }
+      }
+
+      @include md {
+        margin-left: auto;
+      }
+    }
+  }
+}

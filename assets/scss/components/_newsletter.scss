@@ -1,0 +1,153 @@
+// -----------------------------------------------------------------------------
+// This file contains styles for the newsletter section
+// -----------------------------------------------------------------------------
+
+.newsletter {
+  background-color: #{$brand-color};
+
+  &-inner {
+    padding: 16px 16px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include md {
+      display: block;
+      text-align: center;
+      padding: 60px 5vw 74px;
+    }
+
+    h2 {
+      font-weight: 400;
+      font-family: Pacifico, sans-serif;
+      font-size: 20px;
+      color: white;
+      text-align: center;
+      margin-bottom: 10px;
+
+      @include md {
+        font-size: 35px;
+        margin-bottom: 24px;
+        display: inline-block;
+      }
+    }
+
+    .newsletter-icon {
+      height: 17px;
+      width: 17px;
+      display: block;
+      margin-bottom: 6px;
+
+      @include md {
+        height: 36px;
+        width: 36px;
+        display: inline-block;
+        margin-bottom: 0px;
+        vertical-align: sub;
+        margin-right: 18px;
+      }
+    }
+
+    .newsletter-details {
+      display: block;
+      margin-bottom: 10px;
+
+      @include lg {
+        display: inline-block;
+        margin-bottom: 0px;
+      }
+
+      p {
+        display: inline-block;
+        max-width: 312px;
+        font-size: 12px;
+        font-weight: 300;
+        text-align: center;
+
+        @include md {
+          font-size: 20px;
+          max-width: 580px;
+        }
+      }
+    }
+
+    .description-n-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include lg {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    form {
+      margin-top: 8px;
+      height: 32px;
+      display: flex;
+      flex-direction: row;
+
+      @include md {
+        height: 44px;
+      }
+
+      @include lg {
+        display: inline-flex;
+        margin-left: 28px;
+      }
+
+      input[type="email"] {
+        height: 100%;
+        padding: 12px;
+        -webkit-appearance: none;
+        appearance: none;
+        -moz-appearance: none;
+        border-radius: 0;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include md {
+          width: 340px;
+        }
+
+        &::placeholder {
+          font-size: 8px;
+          opacity: .7;
+          vertical-align: middle;
+          transform: translateY(-5px);
+
+          @include md {
+            font-size: 16px;
+            transform: translateY(-2px);
+          }
+        }
+      }
+
+      input[type="submit"] {
+        height: 100%;
+        background: transparent;
+        color: white;
+        border: 1px solid white;
+        font-family: Pacifico, sans-serif;
+        font-size: 10px;
+        -webkit-appearance: none;
+        appearance: none;
+        -moz-appearance: none;
+        border-radius: 0;
+        min-width: 80px;
+        line-height: 1;
+        margin-left: 5px;
+        cursor: pointer;
+
+        @include md {
+          font-size: 20px;
+          border: 2px solid white;
+          width: 160px;
+        }
+      }
+    }
+  }
+}

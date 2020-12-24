@@ -1,0 +1,65 @@
+// -----------------------------------------------------------------------------
+// This file contains styles for the Instagram section
+// -----------------------------------------------------------------------------
+
+.instagram {
+
+  &-inner {
+    padding: 25px 16px 30px;
+
+    .section-title {
+      font-weight: 400;
+      font-family: Pacifico, sans-serif;
+      font-size: 20px;
+      color: black;
+      text-align: center;
+      margin-bottom: 10px;
+
+      @include md {
+        font-size: 35px;
+        margin-bottom: 24px;
+      }
+    }
+
+    .image-list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      column-gap: 8px;
+      overflow: hidden;
+      height: 108px;
+
+      @include md {
+        height: 148px;
+      }
+
+      @include lg {
+        height: 248px;
+      }
+
+      li {
+        display: inline-block;
+      }
+
+      .instagram-image {
+        display: block;
+        height: 108px;
+        width: 108px;
+        object-fit: cover;
+        object-position: center;
+
+        @include md {
+          height: 148px;
+          width: 148px;
+        }
+
+        @include lg {
+          height: 248px;
+          width: 248px;
+        }
+      }
+    }
+  }
+}

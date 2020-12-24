@@ -1,0 +1,104 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the arrivals section
+// -----------------------------------------------------------------------------
+
+.arrivals {
+  padding: 30px 20px 18px 20px;
+
+  &-inner {
+
+    .arrivals-left-arrow {
+      transform: scaleX(-1) translateY(-100%);
+    }
+
+    a {
+      color: initial !important;
+    }
+
+    a:hover {
+      color: initial !important;
+      text-decoration: none !important;
+    }
+
+    .slick-prev,
+    .slick-next {
+      z-index: 5;
+      &::before {
+        display: none;
+      }
+    }
+
+    .slick-prev {
+      left: 0;
+    }
+
+    .slick-next {
+      right: 0;
+    }
+
+    .section-title {
+      font-weight: 400;
+      font-family: Pacifico, sans-serif;
+      font-size: 20px;
+      color: black;
+      text-align: center;
+      margin-bottom: 10px;
+
+      @include md {
+        font-size: 35px;
+        margin-bottom: 24px;
+      }
+    }
+
+    .arrivals-item {
+      max-width: max-content;
+      margin: auto;
+      text-align: center;
+      display: block !important;
+      color: black;
+      
+      .prod-image {
+        margin-bottom: 18px;
+
+        img {
+          width: 150px;
+          height: 224px;
+
+          @include md {
+            width: 267px;
+            height: 400px;
+          }
+        }
+      }
+
+      .prod-title {
+        font-weight: 400;
+        font-size: 16px;
+
+        @include md {
+          font-size: 18px;
+        }
+      }
+
+      .prod-description {
+        font-weight: 300;
+        font-size: 12px;
+
+        @include md {
+          font-size: 16px;
+        }
+      }
+
+      .prod-price {
+        margin-top: 10px;
+        font-family: Pacifico, sans-serif;
+        font-size: 16px;
+        color: #{$brand-color};
+
+        @include md {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}

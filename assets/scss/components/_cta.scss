@@ -1,0 +1,58 @@
+// -----------------------------------------------------------------------------
+// This file contains styles for the CTA section
+// -----------------------------------------------------------------------------
+
+.cta-section {
+
+  &-inner {
+    min-height: 227px;
+    height: calc(100vw * .6);
+    max-height: 638px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
+    .content {
+      margin-right: 5vw;
+
+      h2 {
+        font-size: calc(100vw * (.0026 * 20));
+        margin-bottom: 8px;
+        font-family: Pacifico;
+
+        @include md {
+          font-size: 50px;
+        }
+      }
+
+      h4 {
+        font-weight: 300;
+        margin-bottom: 20px;
+        font-size: calc(100vw * (.0026 * 16));
+
+        @include md {
+          font-size: 40px;
+        }
+      }
+
+      a {
+        background-color: #{$brand-color};
+        font-weight: bold;
+        font-size: calc(100vw * (.0026 * 8));
+        color: white;
+        text-transform: uppercase;
+        display: inline-block;
+        padding: calc(100vw * (.0026 * 6)) calc(100vw * (.0026 * 10));
+        text-decoration: none;
+
+        @include md {
+          padding: 12px 20px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

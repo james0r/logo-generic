@@ -1,7 +1,7 @@
 <template>
   <section id="home-hero" class="home-hero">
     <div class="home-hero-inner">
-      <VueSlickCarousel :arrows="true" :dots="true" class="mobile-slider">
+      <VueSlickCarousel :arrows="false" :dots="true" class="mobile-slider">
         <li v-for="(item, index) in 4" :key="index">
           <MobileSlide
             :bgImage="mobileBgImage"
@@ -12,7 +12,7 @@
           />
         </li>
       </VueSlickCarousel>
-      <VueSlickCarousel :arrows="true" :dots="true" class="desktop-slider">
+      <VueSlickCarousel :arrows="false" :dots="true" class="desktop-slider">
         <li v-for="(item, index) in 4" :key="index">
           <DesktopSlide
             :bgImage="desktopBgImage"
